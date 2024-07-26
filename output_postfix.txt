@@ -1,0 +1,346 @@
+Original: (a|t)c
+Postfix: at|c.
+Steps:
+Pushed '(' to stack
+Added 'a' to postfix expression
+Pushed '|' to stack
+Added 't' to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Pushed '.' to stack
+Added 'c' to postfix expression
+Popped '.' from stack to postfix expression
+
+Original: (a|b)*
+Postfix: ab|*
+Steps:
+Pushed '(' to stack
+Added 'a' to postfix expression
+Pushed '|' to stack
+Added 'b' to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+
+Original: (a*|b*)*
+Postfix: a*b*|*
+Steps:
+Pushed '(' to stack
+Added 'a' to postfix expression
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+Pushed '|' to stack
+Added 'b' to postfix expression
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+
+Original: ((ε|a)|b*)*
+Postfix: εa|b*|*
+Steps:
+Pushed '(' to stack
+Pushed '(' to stack
+Added 'ε' to postfix expression
+Pushed '|' to stack
+Added 'a' to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Pushed '|' to stack
+Added 'b' to postfix expression
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+
+Original: (a|b)*abb(a|b)*
+Postfix: ab|*a.b.b.ab|*.
+Steps:
+Pushed '(' to stack
+Added 'a' to postfix expression
+Pushed '|' to stack
+Added 'b' to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+Pushed '.' to stack
+Added 'a' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'b' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'b' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '(' to stack
+Added 'a' to postfix expression
+Pushed '|' to stack
+Added 'b' to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+Popped '.' from stack to postfix expression
+
+Original: 0?(1?)?0*
+Postfix: 0?1??.0*.
+Steps:
+Added '0' to postfix expression
+Pushed '?' to stack
+Popped '?' from stack to postfix expression
+Pushed '.' to stack
+Pushed '(' to stack
+Added '1' to postfix expression
+Pushed '?' to stack
+Popped '?' from stack to postfix expression
+Popped '(' from stack
+Pushed '?' to stack
+Popped '?' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added '0' to postfix expression
+Pushed '*' to stack
+Popped '*' from stack to postfix expression
+Popped '.' from stack to postfix expression
+
+Original: if\([ae]+\)\{[ei]+\}(\n(else\{[jl]+\}))?
+Postfix: if.\.[a.e.]+.\..\.{.[.e.i.]+.\.}.\n.el.s.e.\.{.[.j.l.]+.\.}..?.
+Steps:
+Added 'i' to postfix expression
+Pushed '.' to stack
+Added 'f' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '\' to stack
+Popped '\' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '(' to stack
+Pushed '[' to stack
+Popped '[' from stack to postfix expression
+Pushed '.' to stack
+Added 'a' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'e' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed ']' to stack
+Popped ']' from stack to postfix expression
+Pushed '+' to stack
+Popped '+' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '\' to stack
+Popped '\' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Popped '(' from stack
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '\' to stack
+Popped '\' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '{' to stack
+Popped '{' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '[' to stack
+Popped '[' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'e' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'i' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed ']' to stack
+Popped ']' from stack to postfix expression
+Pushed '+' to stack
+Popped '+' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '\' to stack
+Popped '\' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '}' to stack
+Popped '}' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '(' to stack
+Pushed '\' to stack
+Popped '\' from stack to postfix expression
+Pushed '.' to stack
+Added 'n' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '(' to stack
+Added 'e' to postfix expression
+Pushed '.' to stack
+Added 'l' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 's' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'e' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '\' to stack
+Popped '\' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '{' to stack
+Popped '{' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '[' to stack
+Popped '[' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'j' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'l' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed ']' to stack
+Popped ']' from stack to postfix expression
+Pushed '+' to stack
+Popped '+' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '\' to stack
+Popped '\' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '}' to stack
+Popped '}' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Popped '(' from stack
+Popped '.' from stack to postfix expression
+Popped '(' from stack
+Pushed '?' to stack
+Popped '?' from stack to postfix expression
+Popped '.' from stack to postfix expression
+
+Original: [ae03]+@[ae03]+.(com|net|org)(.(gt|cr|co))?
+Postfix: [a.e.0.3.]+.@.[.a.e.0.3.]+...co.m.ne.t.|or.g.|..gt.cr.|co.|.?.
+Steps:
+Pushed '[' to stack
+Popped '[' from stack to postfix expression
+Pushed '.' to stack
+Added 'a' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'e' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added '0' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added '3' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed ']' to stack
+Popped ']' from stack to postfix expression
+Pushed '+' to stack
+Popped '+' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '@' to stack
+Popped '@' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '[' to stack
+Popped '[' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'a' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'e' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added '0' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added '3' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed ']' to stack
+Popped ']' from stack to postfix expression
+Pushed '+' to stack
+Popped '+' from stack to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '(' to stack
+Added 'c' to postfix expression
+Pushed '.' to stack
+Added 'o' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'm' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '|' to stack
+Added 'n' to postfix expression
+Pushed '.' to stack
+Added 'e' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 't' to postfix expression
+Popped '.' from stack to postfix expression
+Popped '|' from stack to postfix expression
+Pushed '|' to stack
+Added 'o' to postfix expression
+Pushed '.' to stack
+Added 'r' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Added 'g' to postfix expression
+Popped '.' from stack to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '(' to stack
+Pushed '.' to stack
+Popped '.' from stack to postfix expression
+Pushed '.' to stack
+Pushed '(' to stack
+Added 'g' to postfix expression
+Pushed '.' to stack
+Added 't' to postfix expression
+Popped '.' from stack to postfix expression
+Pushed '|' to stack
+Added 'c' to postfix expression
+Pushed '.' to stack
+Added 'r' to postfix expression
+Popped '.' from stack to postfix expression
+Popped '|' from stack to postfix expression
+Pushed '|' to stack
+Added 'c' to postfix expression
+Pushed '.' to stack
+Added 'o' to postfix expression
+Popped '.' from stack to postfix expression
+Popped '|' from stack to postfix expression
+Popped '(' from stack
+Popped '.' from stack to postfix expression
+Popped '(' from stack
+Pushed '?' to stack
+Popped '?' from stack to postfix expression
+Popped '.' from stack to postfix expression
+
